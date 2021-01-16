@@ -15,6 +15,9 @@
         <div id="app" class="container">
             <h1>{{titulo}}</h1>
 
+            <input type="text" name="" id="" class="fotm-control" v-model="nuevaFruta">
+            <button class="btn btn-info"  @:click.prevent="agregarFruta">Agregar Fruta</button>
+
             <ul>
                 <li v-for="fruta in frutas">
                     {{fruta.cantidad}} - {{fruta.nombre}}
