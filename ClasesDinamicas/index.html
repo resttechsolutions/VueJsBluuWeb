@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="app" class="container mt-5">
+            <div :class="['p-3', 'text-white', fondo]">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Porro ex voluptates odio. Illo minima quasi voluptates,
+                    eveniet omnis ullam consequuntur rem reprehenderit saepe
+                    blanditiis cum. Iusto ex nulla aspernatur eaque?Tenetur
+                    tempore possimus sint ea similique ullam officiis explicabo
+                    asperiores tempora, illo excepturi commodi consectetur,
+                    eaque assumenda quae expedita mollitia alias. Natus, eos ex
+                    harum eligendi ab quia nam illo.</p>
+            </div>
+
+            <input type="text" v-model="fondo" id="" class="form-control my-3">
+            <p class="text-white p-3" :class="{'bg-info' : color, 'bg-success' :
+                !color}">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Exercitationem nemo corporis odio nobis, sit a natus
+                repellendus! Amet nesciunt, quibusdam quisquam dolorum, porro
+                quidem quod, veniam repudiandae modi voluptatibus harum.Beatae
+                dolorem quam nihil fugiat voluptates distinctio, consequatur ex
+                ab minus possimus totam repellendus? Sed similique odio adipisci
+                ad assumenda! Maxime facilis dolorem saepe neque iste vel
+                distinctio exercitationem repellat!</p>
+
+
+                <button class="btn btn-primary" @click="color = !color">Cambiar</button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="Assets/js/app.js"></script>
+    </body>
+</html>
