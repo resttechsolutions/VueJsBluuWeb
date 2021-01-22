@@ -28,7 +28,7 @@ const app = new Vue({
     },
     beforeDestroy() {
         //Antes de destruir la instancia
-        console.log('beforeDistroy')
+        console.log('beforeDestroy')
     },
     destroyed() {
         //Se destruye la instancia
