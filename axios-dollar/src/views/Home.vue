@@ -1,8 +1,14 @@
 <template>
   <div>
+    <v-card  elevation="5" class="my-5 py-2">
+      <v-card-text class="display-1 text-center my-5 py-2">
+        Currency Rates Dollar (USD) to Pesos (DOP)
+      </v-card-text>
+    </v-card>
+
     <v-layout :wrap="true">
       <v-flex xs12>
-        <v-card>
+        <v-card elevation="20">
           <v-date-picker
             v-model="fecha"
             full-width
@@ -14,7 +20,7 @@
         </v-card>
         <v-card color="error" dark>
           <v-card-text class="display-1 text-center">
-            {{ valor }}
+            1.00 USD = $RD {{ valor }}
           </v-card-text>
         </v-card>
       </v-flex>
@@ -24,7 +30,7 @@
 
 <script>
 import axios from "axios";
-import { mapMutations } from 'vuex'
+import { mapMutations } from "vuex";
 
 export default {
   data() {
@@ -36,13 +42,16 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['mostrarLoading', 'ocultarLoading']),
+    ...mapMutations(["mostrarLoading", "ocultarLoading"]),
 
     async getDolar(dia) {
       // let datos = await axios.get(`https://mindicador.cl/api/dolar/${dia}`)
 
       try {
-        this.mostrarLoading({titulo: 'Accediendo a la informacion', color: 'secondary'})
+        this.mostrarLoading({
+          titulo: "Accediendo a la informacion",
+          color: "secondary",
+        });
         let datos = await axios.get(
           `https://openexchangerates.org/api/historical/${dia}.json?app_id=c9d70a0f069b4b9fb428ff437376a41c&base=USD`
         );
@@ -51,12 +60,12 @@ export default {
         if (datos.data.rates != null) {
           this.valor = await parseFloat(datos.data.rates.DOP).toFixed(2);
         } else {
-          this.valor = 'Sin resultados'
+          this.valor = "Sin resultados";
         }
       } catch (error) {
-        console.log(error)
-      } finally{
-        this.ocultarLoading()
+        console.log(error);
+      } finally {
+        this.ocultarLoading();
       }
 
       // this.valor = await datos.data.serie[0].valor
