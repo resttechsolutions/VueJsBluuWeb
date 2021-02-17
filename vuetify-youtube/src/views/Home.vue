@@ -27,7 +27,7 @@
         <h1 class="display-1 text-uppercase">Lorem, ipsum dolor.</h1>
         <h1 class="display-2 primary pa-5 mt-5">Lorem, ipsum dolor.</h1>
         <h1 class="display-3 text-center">Lorem, ipsum dolor.</h1>
-        <h1 class="display-4">Lorem, ipsum dolor.</h1>
+        <h1 class="display-4 text-right">Lorem, ipsum dolor.</h1>
       </v-flex>
     </v-layout>
   </v-container>
