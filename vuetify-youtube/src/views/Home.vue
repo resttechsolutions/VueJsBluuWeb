@@ -30,7 +30,7 @@
       </v-flex>
       <v-flex xs12 md6>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg">
+          <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
             <v-container>
               <v-layout>
                 <v-flex>
